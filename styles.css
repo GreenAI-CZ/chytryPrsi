@@ -214,6 +214,7 @@ p { margin: 0 0 1em; }
   background: #fffaf0; border: 2px solid var(--ink); border-radius: var(--radius); padding: 24px;
 }
 .special .card { width: 84px; box-shadow: 3px 3px 0 var(--ink); }
+.special .card--art { border-radius: 8px; }
 .special p { margin: 0; color: var(--ink-2); font-size: .97rem; }
 
 /* META RULES */
@@ -327,7 +328,7 @@ p { margin: 0 0 1em; }
 
 /* LICENSE */
 /* NAPIŠTE NÁM */
-.pay__qr { margin: 0; justify-self: center; background: #fffaf0; border: 2px solid var(--ink); border-radius: var(--radius);
+.pay__qr { margin: 0; justify-self: center; background: #fffaf0; color: var(--ink); border: 2px solid var(--ink); border-radius: var(--radius);
   box-shadow: 6px 6px 0 var(--ink); padding: 22px 22px 16px; text-align: center; max-width: 340px; width: 100%; }
 .pay__qr img { width: 100%; height: auto; }
 .pay__qr figcaption { margin-top: 10px; font-size: .95rem; }
@@ -342,6 +343,7 @@ p { margin: 0 0 1em; }
   padding: 32px clamp(16px, 6vw, 96px); border-top: 2px solid var(--ink); font-size: .95rem;
 }
 .footer p { margin: 0; }
+.footer a { color: inherit; }
 .footer__suits { display: flex; gap: 10px; }
 .footer__suits svg { width: 24px; height: 24px; color: var(--suit); }
 
@@ -374,7 +376,7 @@ p { margin: 0 0 1em; }
 @media print {
   @page { margin: 14mm; }
   body { background: #fff; font-size: 11pt; }
-  .nav, .hero__cards, .hero__cta, .hero__note, #vyzkousej, #open-source, .footer, .steps { display: none !important; }
+  .nav, .hero__cards, .hero__cta, .hero__note, #napiste, .footer, .steps { display: none !important; }
   .hero { min-height: 0; padding: 0 0 12pt; display: block; background: none; }
   .hero h1 { font-size: 40pt; margin-bottom: 8pt; }
   .hero h1 br { display: none; }

@@ -15,7 +15,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,800;9..144,900&family=Work+Sans:wght@400;500;700&display=swap&subset=latin-ext" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=4">
+  <link rel="stylesheet" href="styles.css?v=6">
 </head>
 <body>
 
@@ -50,7 +50,6 @@
       <a href="#potrebujete">Co potřebujete</a>
       <a href="#pravidla">Základní pravidla</a>
       <a href="#inspirace">Inspirace</a>
-      <a href="#open-source">Open source</a>
       <a href="#napiste">Napište nám</a>
     </nav>
   </header>
@@ -65,7 +64,7 @@
         <p class="hero__lead">Klasické prší, které si pamatuje. Každý vítěz kola vymyslí nové pravidlo. Hra je s&nbsp;každým kolem těžší, chaotičtější a&nbsp;zábavnější.</p>
         <div class="hero__cta">
           <a class="btn btn--primary" href="#co-to-je">Naučit se hrát</a>
-          <a class="btn btn--ghost" href="downloads/chytre-prsi-pravidla.pdf?v=2" download>Stáhnout pravidla (PDF)</a>
+          <a class="btn btn--ghost" href="downloads/chytre-prsi-pravidla.pdf?v=2" target="_blank" rel="noopener">Stáhnout pravidla (PDF)</a>
         </div>
         <p class="hero__note">Pravidla zdarma · open source · stačí obyčejné mariášky</p>
       </div>
@@ -142,13 +141,13 @@
             <span class="need__n">B</span>
             <h3>Vytiskněte si naše</h3>
             <p>Nemáte karty a máte čas? Stáhněte si naše karty, vytiskněte je a vystříhejte.</p>
-            <a class="btn btn--ghost" href="downloads/chytre-prsi-karty.pdf" download>Stáhnout karty k tisku (PDF)</a>
+            <a class="btn btn--ghost" href="downloads/chytre-prsi-karty.pdf" target="_blank" rel="noopener">Stáhnout karty k tisku (PDF)</a>
           </article>
           <article class="need__opt need__opt--accent">
             <span class="need__n">C</span>
             <h3>Naše verze chytrého prší</h3>
             <p>Základní pravidla i návrhy chytrých pravidel na jednom listu.</p>
-            <a class="btn btn--primary" href="downloads/chytre-prsi-pravidla.pdf?v=2" download>Stáhnout pravidla (PDF)</a>
+            <a class="btn btn--primary" href="downloads/chytre-prsi-pravidla.pdf?v=2" target="_blank" rel="noopener">Stáhnout pravidla (PDF)</a>
           </article>
         </div>
 
@@ -193,21 +192,21 @@
         <h2 class="mt">Speciální karty</h2>
         <div class="specials">
           <article class="special">
-            <div class="card" data-suit="srdce"><span class="card__v">7</span><svg><use href="#s-srdce"/></svg></div>
+            <div class="card card--art"><img src="img/karty/srdce-7.webp" alt="" width="640" height="960" loading="lazy"></div>
             <div>
               <h3>Sedmička</h3>
               <p>Další hráč líže <strong>2 karty</strong>. Lze ji přebít další sedmičkou — pak následující hráč líže 2&nbsp;karty za každou zahranou sedmičku.</p>
             </div>
           </article>
           <article class="special">
-            <div class="card" data-suit="listy"><span class="card__v">S</span><svg><use href="#s-listy"/></svg></div>
+            <div class="card card--art"><img src="img/karty/listy-svrsek.webp" alt="" width="640" height="960" loading="lazy"></div>
             <div>
               <h3>Svršek</h3>
               <p>Lze zahrát <strong>na jakoukoliv kartu</strong> kromě sedmičky a&nbsp;esa. Kdo ho zahraje, <strong>změní barvu</strong> podle svého výběru.</p>
             </div>
           </article>
           <article class="special">
-            <div class="card" data-suit="kule"><span class="card__v">E</span><svg><use href="#s-kule"/></svg></div>
+            <div class="card card--art"><img src="img/karty/kule-eso.webp" alt="" width="640" height="960" loading="lazy"></div>
             <div>
               <h3>Eso</h3>
               <p>Další hráč <strong>stojí jedno kolo</strong> (přeskočí tah). Lze ho přebít dalším esem.</p>
@@ -226,31 +225,11 @@
         <div class="ideas" id="ideas"></div>
       </div>
     </section>
-
-    <!-- OPEN SOURCE -->
-    <section class="section section--ink" id="open-source">
-      <div class="wrap two-col two-col--center">
-        <div>
-          <p class="eyebrow">06 · Open source</p>
-          <h2>Pravidla patří všem</h2>
-          <p>Chytré prší je zdarma. Pravidla můžete číst, tisknout, upravovat a&nbsp;sdílet. Hra je vlastně open source sama od sebe — každá parta si ji přepisuje kolo po kole.</p>
-          <p>Máte pravidlo, které u&nbsp;vás zabralo? <a href="#napiste">Pošlete nám ho</a> a&nbsp;přidáme ho mezi inspiraci.</p>
-          <div class="hero__cta">
-            <!-- Po založení repozitáře sem přidat: <a class="btn btn--primary" href="https://github.com/…">Přispět na GitHubu</a> -->
-            <a class="btn btn--ghost btn--light" href="downloads/chytre-prsi-pravidla.pdf?v=2" download>Stáhnout pravidla (PDF)</a>
-          </div>
-        </div>
-        <div class="license">
-          <p class="license__tag">CC BY-SA 4.0</p>
-          <p>Text pravidel je zveřejněn pod licencí Creative Commons Uveďte původ – Zachovejte licenci. Sdílejte a&nbsp;upravujte, jen uveďte zdroj a&nbsp;zachovejte stejnou licenci.</p>
-        </div>
-      </div>
-    </section>
     <!-- NAPIŠTE NÁM -->
-    <section class="section" id="napiste">
+    <section class="section section--ink" id="napiste">
       <div class="wrap two-col two-col--center">
         <div>
-          <p class="eyebrow">07 · Napište nám</p>
+          <p class="eyebrow">06 · Napište nám</p>
           <h2>Máte nápad na nové pravidlo?</h2>
           <p class="lead">Pošlete nám zprávu tak, že nás podpoříte přes QR platbu. Stačí jedna koruna — napište nápad do zprávy pro příjemce a&nbsp;dostane se k&nbsp;nám. 😊</p>
         </div>
@@ -263,7 +242,7 @@
   </main>
 
   <footer class="footer">
-    <p><strong>Chytré prší</strong> · hra, kterou hrajeme s&nbsp;kamarády a&nbsp;rádi se o&nbsp;ni dělíme.</p>
+    <p><strong>Chytré prší</strong> · hra, kterou hrajeme s&nbsp;kamarády a&nbsp;rádi se o&nbsp;ni dělíme. Text pravidel: <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.cs" target="_blank" rel="noopener">CC BY-SA 4.0</a></p>
     <p class="footer__suits" aria-hidden="true">
       <svg data-suit="srdce"><use href="#s-srdce"/></svg>
       <svg data-suit="listy"><use href="#s-listy"/></svg>
