@@ -28,7 +28,7 @@ IDEAS = [
     ("srdce", "Červená sedmička", "Vrací do hry, má-li ji hráč po vítězi."),
     ("zaludy", "Výměna karet", "Vybraná karta dovolí vyměnit si karty s jiným hráčem."),
     ("listy", "Vyrušení", "Vybraná karta ruší efekt právě zahrané karty."),
-    ("kule", "Nelze vyhrát svrškem", "Poslední kartou nesmí být svršek. Kdo tak dohraje, líže."),
+    ("kule", "Ať žije král!", "Kdo zahraje krále, řekne „Ať žije král!“. Kdo zapomene, líže."),
     ("zaludy", "Tichá osmička", "Po osmičce se mlčí až do další osmičky. Kdo promluví, líže."),
 ]
 

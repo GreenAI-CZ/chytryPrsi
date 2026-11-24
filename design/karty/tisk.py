@@ -50,7 +50,7 @@ RULES = [
 <p><b>Červená sedmička</b> vrací do hry, má-li ji hráč po vítězi.</p>
 <p><b>Výměna karet</b> s jiným hráčem za vybranou kartu.</p>
 <p><b>Vyrušení:</b> vybraná karta ruší efekt právě zahrané.</p>
-<p><b>Nelze vyhrát svrškem.</b> Kdo dohraje svrškem, líže.</p>
+<p><b>Ať žije král!</b> Kdo zahraje krále a neřekne to, líže.</p>
 <p><b>Tichá osmička:</b> po osmičce se mlčí do další osmičky, kdo promluví, líže.</p>
 <p class="muted">Nejlepší pravidla si ale vymyslíte sami.</p>
 """),

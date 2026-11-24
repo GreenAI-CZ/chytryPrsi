@@ -325,6 +325,12 @@ p { margin: 0 0 1em; }
 .idea--own { background: var(--ink); color: var(--paper); border-top-color: var(--kule); }
 .idea--own h3 { margin-bottom: 8px; }
 .idea--own p { color: var(--paper); opacity: .85; }
+/* jemná záře a jednou za pár sekund přejede přes kartu světlý odlesk */
+.idea--own { position: relative; overflow: hidden; box-shadow: 0 0 18px rgba(217,154,30,.35); }
+.idea--own::after { content: ""; position: absolute; top: -40%; bottom: -40%; left: -60%; width: 45%; transform: rotate(18deg);
+  background: linear-gradient(90deg, transparent, rgba(255,236,190,.28), transparent); animation: sheen 5s ease-in-out infinite; pointer-events: none; }
+@keyframes sheen { 0%, 55% { left: -60%; } 85%, 100% { left: 130%; } }
+@media (prefers-reduced-motion: reduce) { .idea--own::after { animation: none; display: none; } }
 
 /* LICENSE */
 /* NAPIŠTE NÁM */
