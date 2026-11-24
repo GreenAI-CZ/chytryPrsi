@@ -8,6 +8,8 @@ const IDEAS = [
   { name: 'Červená sedmička', suit: 'srdce', text: 'Vrací do hry, pokud ji má hráč, který následuje po vítězi.' },
   { name: 'Výměna karet', suit: 'zaludy', text: 'Vybraná karta umožní vyměnit si karty s jiným hráčem.' },
   { name: 'Vyrušení', suit: 'listy', text: 'Vybraná karta ruší efekt právě zahrané karty.' },
+  { name: 'Nelze vyhrát svrškem', suit: 'kule', text: 'Poslední kartou nesmí být svršek. Kdo tak dohraje, líže si kartu.' },
+  { name: 'Tichá osmička', suit: 'zaludy', text: 'Po zahrání osmičky se mlčí, dokud někdo nezahraje další osmičku. Kdo promluví, líže si kartu.' },
 ];
 
 const suitIcon = (suit) => `<svg><use href="#s-${suit}"/></svg>`;

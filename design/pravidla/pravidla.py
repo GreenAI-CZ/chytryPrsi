@@ -28,6 +28,8 @@ IDEAS = [
     ("srdce", "Červená sedmička", "Vrací do hry, má-li ji hráč po vítězi."),
     ("zaludy", "Výměna karet", "Vybraná karta dovolí vyměnit si karty s jiným hráčem."),
     ("listy", "Vyrušení", "Vybraná karta ruší efekt právě zahrané karty."),
+    ("kule", "Nelze vyhrát svrškem", "Poslední kartou nesmí být svršek. Kdo tak dohraje, líže."),
+    ("zaludy", "Tichá osmička", "Po osmičce se mlčí až do další osmičky. Kdo promluví, líže."),
 ]
 
 SMART = [
@@ -50,8 +52,8 @@ def main():
 <style>
 @page {{ size: A4; margin: 0; }}
 * {{ box-sizing: border-box; margin: 0; padding: 0; }}
-body {{ font: 9.4pt/1.38 'Work Sans', sans-serif; color: #1d1a17; }}
-.page {{ width: 210mm; height: 297mm; padding: 12mm 14mm 10mm; display: flex; flex-direction: column; gap: 4.2mm; overflow: hidden; }}
+body {{ font: 9.1pt/1.34 'Work Sans', sans-serif; color: #1d1a17; }}
+.page {{ width: 210mm; height: 297mm; padding: 10mm 14mm 9mm; display: flex; flex-direction: column; gap: 3.4mm; overflow: hidden; }}
 h1, h2 {{ font-family: 'Fraunces', serif; font-weight: 900; line-height: 1; letter-spacing: -.01em; }}
 h1 {{ font-size: 40pt; letter-spacing: -.02em; }}
 h2 {{ font-size: 15pt; margin-bottom: 2mm; display: flex; align-items: baseline; gap: 2.5mm; }}
@@ -87,7 +89,7 @@ ul, ol {{ list-style: none; }}
   background: #1d1a17; color: #fffaf0; font: 800 8pt/5mm 'Fraunces', serif; text-align: center; }}
 .note {{ display: grid; grid-template-columns: 1fr 1fr; gap: 7mm; margin-top: 2.5mm; }}
 .note p {{ border-left: .8mm solid #c8322b; padding-left: 2.5mm; }}
-.ideas {{ display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.4mm 5mm; font-size: 8.6pt; line-height: 1.3; }}
+.ideas {{ display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.8mm 5mm; font-size: 8.4pt; line-height: 1.3; }}
 .idea {{ display: flex; gap: 2mm; align-items: flex-start; }}
 .idea .sym {{ margin-top: .4mm; }}
 .own {{ margin-top: 2.4mm; font-style: italic; color: #6b5f52; }}
