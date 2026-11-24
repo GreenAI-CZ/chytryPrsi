@@ -41,6 +41,6 @@ Web běží na GitHub Pages s doménou `chytryprsi.cz` (soubor `CNAME`).
 | AAAA | (prázdné) | 2606:50c0:8001::153 |
 | AAAA | (prázdné) | 2606:50c0:8002::153 |
 | AAAA | (prázdné) | 2606:50c0:8003::153 |
-| CNAME | www | `marek000.github.io` |
+| CNAME | www | `greenai-cz.github.io` |
 
 Původní A záznam (185.8.237.22) je potřeba smazat.
