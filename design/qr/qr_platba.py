@@ -10,7 +10,7 @@ ROOT = pathlib.Path(__file__).resolve().parents[2]
 
 ACCOUNT = "6761768329/0800"
 AMOUNT = "1.00"
-VS = "111222333"
+VS = "99"
 # Bez diakritiky: ne každá bankovní aplikace ji ve zprávě z QR přečte.
 MESSAGE = "Mam napad na nove pravidlo chytreho prsi"
 
