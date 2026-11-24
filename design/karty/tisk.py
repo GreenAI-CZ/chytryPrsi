@@ -49,7 +49,6 @@ RULES = [
 <p><b>Změna směru:</b> vybraná karta otáčí směr hry.</p>
 <p><b>Červená sedmička</b> vrací do hry, má-li ji hráč po vítězi.</p>
 <p><b>Výměna karet</b> s jiným hráčem za vybranou kartu.</p>
-<p><b>Duha:</b> jedna karta od každé barvy — vylož všechny čtyři.</p>
 <p><b>Vyrušení:</b> vybraná karta ruší efekt právě zahrané.</p>
 <p class="muted">Nejlepší pravidla si ale vymyslíte sami.</p>
 """),

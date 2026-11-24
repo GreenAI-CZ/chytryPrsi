@@ -7,7 +7,6 @@ const IDEAS = [
   { name: 'Změna směru', suit: 'listy', text: 'Vybraná karta otáčí směr hry.' },
   { name: 'Červená sedmička', suit: 'srdce', text: 'Vrací do hry, pokud ji má hráč, který následuje po vítězi.' },
   { name: 'Výměna karet', suit: 'zaludy', text: 'Vybraná karta umožní vyměnit si karty s jiným hráčem.' },
-  { name: 'Duha', suit: 'kule', text: 'Kdo má od každé barvy jednu kartu, může říct „Duha“ a vyložit všechny čtyři najednou.' },
   { name: 'Vyrušení', suit: 'listy', text: 'Vybraná karta ruší efekt právě zahrané karty.' },
 ];
 

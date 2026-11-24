@@ -27,7 +27,6 @@ IDEAS = [
     ("listy", "Změna směru", "Vybraná karta otáčí směr hry."),
     ("srdce", "Červená sedmička", "Vrací do hry, má-li ji hráč po vítězi."),
     ("zaludy", "Výměna karet", "Vybraná karta dovolí vyměnit si karty s jiným hráčem."),
-    ("kule", "Duha", "Máš od každé barvy jednu? Řekni „Duha“ a vylož všechny čtyři."),
     ("listy", "Vyrušení", "Vybraná karta ruší efekt právě zahrané karty."),
 ]
 
