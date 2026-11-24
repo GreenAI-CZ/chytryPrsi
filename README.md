@@ -16,7 +16,7 @@ Pak otevřete http://localhost:8123.
 
 - Návrhy pravidel (sekce Inspirace) jsou v poli `IDEAS` v `app.js`.
 - Soubory ke stažení jsou ve složce `downloads/` (`chytre-prsi-pravidla.pdf`, `chytre-prsi-karty.pdf`). Karty k tisku se generují z `design/karty/` (`deck.py` a `extra.py` kreslí přes Codex z ChatGPT předplatného, `tisk.py` skládá PDF).
-- Tlačítko „Vytisknout pravidla“ používá tiskový styl v `styles.css` (`@media print`).
+- Tlačítka „Stáhnout pravidla“ vedou na `downloads/chytre-prsi-pravidla.pdf` (generuje `design/pravidla/pravidla.py`); při změně PDF zvyšte `?v=` v odkazech, ať se nestahuje stará verze z cache.
 
 ## Licence
 
