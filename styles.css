@@ -111,6 +111,8 @@ p { margin: 0 0 1em; }
   transition: transform .4s cubic-bezier(.2,.8,.2,1);
 }
 .card--fan .card__v { font-size: 2.4rem; top: 12px; left: 18px; }
+.card--art { aspect-ratio: 2 / 3; overflow: hidden; }
+.card--art img { width: 100%; height: 100%; object-fit: cover; }
 .c1 { transform: translate(-50%, -50%) rotate(-24deg) translateX(-60px); }
 .c2 { transform: translate(-50%, -50%) rotate(-8deg) translateX(-20px); }
 .c3 { transform: translate(-50%, -50%) rotate(8deg) translateX(20px); }

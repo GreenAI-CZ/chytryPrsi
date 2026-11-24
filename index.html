@@ -15,7 +15,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,800;9..144,900&family=Work+Sans:wght@400;500;700&display=swap&subset=latin-ext" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=3">
 </head>
 <body>
 
@@ -49,7 +49,6 @@
       <a href="#chytre">Chytrá pravidla</a>
       <a href="#potrebujete">Co potřebujete</a>
       <a href="#pravidla">Základní pravidla</a>
-      <a href="#vyzkousej">Vyzkoušej</a>
       <a href="#inspirace">Inspirace</a>
       <a href="#open-source">Open source</a>
     </nav>
@@ -70,10 +69,10 @@
         <p class="hero__note">Pravidla zdarma · open source · stačí obyčejné mariášky</p>
       </div>
       <div class="hero__cards" aria-hidden="true">
-        <div class="card card--fan c1" data-suit="srdce"><span class="card__v">7</span><svg><use href="#s-srdce"/></svg></div>
-        <div class="card card--fan c2" data-suit="listy"><span class="card__v">S</span><svg><use href="#s-listy"/></svg></div>
-        <div class="card card--fan c3" data-suit="zaludy"><span class="card__v">K</span><svg><use href="#s-zaludy"/></svg></div>
-        <div class="card card--fan c4" data-suit="kule"><span class="card__v">E</span><svg><use href="#s-kule"/></svg></div>
+        <div class="card card--fan card--art c1"><img src="img/karty/srdce-7.webp" alt="" width="640" height="960"></div>
+        <div class="card card--fan card--art c2"><img src="img/karty/listy-svrsek.webp" alt="" width="640" height="960"></div>
+        <div class="card card--fan card--art c3"><img src="img/karty/zaludy-kral.webp" alt="" width="640" height="960"></div>
+        <div class="card card--fan card--art c4"><img src="img/karty/kule-eso.webp" alt="" width="640" height="960"></div>
       </div>
     </section>
 
@@ -130,7 +129,7 @@
       <div class="wrap">
         <p class="eyebrow">03 · Co potřebujete</p>
         <h2>Jeden balíček mariášových karet</h2>
-        <p class="lead">Nic víc. Možná ho máte doma v šuplíku, jen s ním tak často nehrajete. Hodí se jednohlavé i dvouhlavé, 32 karet.</p>
+        <p class="lead">Nic víc. Možná ho máte doma v šuplíku, jen s ním tak často nehrajete. Hodí se jednohlavé i dvouhlavé, 32 karet. Pro pět a více hráčů doporučujeme dva balíčky karet.</p>
 
         <div class="need">
           <article class="need__opt">
@@ -142,7 +141,7 @@
             <span class="need__n">B</span>
             <h3>Vytiskněte si naše</h3>
             <p>Nemáte karty a máte čas? Stáhněte si naše karty, vytiskněte je a vystříhejte.</p>
-            <span class="btn btn--ghost btn--soon">Karty k tisku chystáme</span>
+            <a class="btn btn--ghost" href="downloads/chytre-prsi-karty.pdf" download>Stáhnout karty k tisku (PDF)</a>
           </article>
           <article class="need__opt need__opt--accent">
             <span class="need__n">C</span>
@@ -217,59 +216,10 @@
       </div>
     </section>
 
-    <!-- SIMULÁTOR -->
-    <section class="section section--felt" id="vyzkousej">
-      <div class="wrap">
-        <p class="eyebrow">05 · Vyzkoušej si to</p>
-        <h2>Sleduj, jak hra roste</h2>
-        <p class="lead">Odehraj pár kol nanečisto. Každý vítěz přidá pravidlo — nebo napiš vlastní.</p>
-
-        <div class="sim">
-          <div class="sim__controls">
-            <button class="btn btn--primary" type="button" id="sim-play">Odehrát kolo</button>
-            <button class="btn btn--ghost" type="button" id="sim-reset">Začít znovu</button>
-            <form class="sim__own" id="sim-form">
-              <label for="sim-input" class="sr-only">Vlastní pravidlo</label>
-              <input id="sim-input" type="text" maxlength="120" placeholder="…nebo napiš vlastní pravidlo" autocomplete="off">
-              <button class="btn btn--small" type="submit">Přidat</button>
-            </form>
-          </div>
-
-          <div class="sim__meter" aria-hidden="true">
-            <span>Obtížnost</span>
-            <div class="sim__bar"><i id="sim-bar"></i></div>
-            <span id="sim-level">Pohodička</span>
-          </div>
-
-          <p class="sim__status" id="sim-status" aria-live="polite">Kolo 1 · hrají se jen základní pravidla pomalého prší.</p>
-
-          <ol class="sim__list" id="sim-list">
-            <li class="sim__base">Pomalé prší — sedmička, svršek, eso</li>
-          </ol>
-        </div>
-
-        <div class="board" id="zebricek">
-          <div class="board__head">
-            <h3>Žebříček chytrých hlav</h3>
-            <p>Do žebříčku se dostaneš, když <strong>za každé kolo napíšeš vlastní pravidlo</strong> — aspoň 4 kola, nejvíc 8. Čím víc kol vymyslíš, tím výš budeš.</p>
-          </div>
-
-          <form class="board__join" id="board-form">
-            <label for="board-name" class="sr-only">Tvoje jméno</label>
-            <input id="board-name" type="text" maxlength="30" placeholder="Tvoje jméno" autocomplete="nickname">
-            <button class="btn btn--primary" type="submit" id="board-submit" disabled>Zapsat se do žebříčku</button>
-          </form>
-          <p class="board__hint" id="board-hint" aria-live="polite"></p>
-
-          <ol class="board__list" id="board-list"></ol>
-        </div>
-      </div>
-    </section>
-
     <!-- INSPIRACE -->
     <section class="section" id="inspirace">
       <div class="wrap">
-        <p class="eyebrow">06 · Inspirace</p>
+        <p class="eyebrow">05 · Inspirace</p>
         <h2>Návrhy chytrých pravidel</h2>
         <p class="lead">Nevíte, co vymyslet? Začněte tady. Ale nejlepší pravidla jsou ta, která si vymyslíte sami.</p>
         <div class="ideas" id="ideas"></div>
@@ -280,7 +230,7 @@
     <section class="section section--ink" id="open-source">
       <div class="wrap two-col two-col--center">
         <div>
-          <p class="eyebrow">07 · Open source</p>
+          <p class="eyebrow">06 · Open source</p>
           <h2>Pravidla patří všem</h2>
           <p>Chytré prší je zdarma. Pravidla můžete číst, tisknout, upravovat a&nbsp;sdílet. Hra je vlastně open source sama od sebe — každá parta si ji přepisuje kolo po kole.</p>
           <p>Máte pravidlo, které u&nbsp;vás zabralo? Pošlete nám ho a&nbsp;přidáme ho mezi inspiraci.</p>

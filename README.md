@@ -14,9 +14,8 @@ Pak otevřete http://localhost:8123.
 
 ## Úpravy
 
-- Návrhy pravidel (sekce Inspirace i simulátor) jsou v poli `IDEAS` v `app.js`.
-- Soubory ke stažení jsou ve složce `downloads/` (`chytre-prsi-pravidla.pdf`; karty k tisku zatím chybí).
-- Žebříček se zatím ukládá jen do prohlížeče (`localStorage`). Pro sdílený žebříček stačí vyměnit objekt `board` v `app.js` za volání backendu.
+- Návrhy pravidel (sekce Inspirace) jsou v poli `IDEAS` v `app.js`.
+- Soubory ke stažení jsou ve složce `downloads/` (`chytre-prsi-pravidla.pdf`, `chytre-prsi-karty.pdf`). Karty k tisku se generují z `design/karty/` (`deck.py` a `extra.py` kreslí přes Codex z ChatGPT předplatného, `tisk.py` skládá PDF).
 - Tlačítko „Vytisknout pravidla“ používá tiskový styl v `styles.css` (`@media print`).
 
 ## Licence

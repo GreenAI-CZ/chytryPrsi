@@ -1,2 +1,8 @@
 .DS_Store
 .claude/
+# Originály karet (PNG z Codexu, ~70 MB) zůstávají lokálně; do repa jdou JPEGy v design/karty/tisk/.
+design/karty/balicek/
+design/karty/balicek-prehled.png
+# Mezivýstupy, ze kterých Chrome tiskne PDF
+design/karty/tisk.html
+design/pravidla/pravidla.html
