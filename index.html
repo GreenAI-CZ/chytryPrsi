@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chytré prší</title>
+  <meta name="description" content="Chytré prší – karetní hra, která roste s každým kolem. Pravidla zdarma a open source.">
+  <meta property="og:title" content="Chytré prší">
+  <meta property="og:description" content="Klasické prší, které si pamatuje. Každý vítěz kola vymyslí nové pravidlo.">
+  <meta property="og:url" content="https://chytryprsi.cz/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="cs_CZ">
+  <link rel="canonical" href="https://chytryprsi.cz/">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 28C6 20 2 15 2 10a7 7 0 0 1 14-2 7 7 0 0 1 14 2c0 5-4 10-14 18z' fill='%23c8322b'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,800;9..144,900&family=Work+Sans:wght@400;500;700&display=swap&subset=latin-ext" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Symboly mariášových barev -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="s-srdce" viewBox="0 0 32 32">
+        <path d="M16 28C6 20 2 15 2 10a7 7 0 0 1 14-2 7 7 0 0 1 14 2c0 5-4 10-14 18z" fill="currentColor"/>
+      </symbol>
+      <symbol id="s-listy" viewBox="0 0 32 32">
+        <path d="M16 2c8 6 12 12 10 20-2 5-6 7-10 8-4-1-8-3-10-8C4 14 8 8 16 2z" fill="currentColor"/>
+        <path d="M16 7v23M16 14l-5 4M16 14l5 4M16 21l-6 3M16 21l6 3" stroke="var(--paper)" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+      </symbol>
+      <symbol id="s-zaludy" viewBox="0 0 32 32">
+        <path d="M15 1h2v4h-2z" fill="currentColor"/>
+        <path d="M5 14c0-6 5-10 11-10s11 4 11 10z" fill="currentColor"/>
+        <path d="M8 15h16c0 8-4 13-8 15-4-2-8-7-8-15z" fill="currentColor" opacity=".75"/>
+      </symbol>
+      <symbol id="s-kule" viewBox="0 0 32 32">
+        <circle cx="16" cy="16" r="13" fill="currentColor"/>
+        <path d="M4 14h24" stroke="var(--paper)" stroke-width="2"/>
+        <circle cx="16" cy="22" r="2.5" fill="var(--paper)"/>
+      </symbol>
+    </defs>
+  </svg>
+
+  <header class="nav">
+    <a class="nav__logo" href="#top">Chytré prší</a>
+    <nav class="nav__links" aria-label="Hlavní navigace">
+      <a href="#co-to-je">Co to je</a>
+      <a href="#chytre">Chytrá pravidla</a>
+      <a href="#potrebujete">Co potřebujete</a>
+      <a href="#pravidla">Základní pravidla</a>
+      <a href="#vyzkousej">Vyzkoušej</a>
+      <a href="#inspirace">Inspirace</a>
+      <a href="#open-source">Open source</a>
+    </nav>
+  </header>
+
+  <main id="top">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero__text">
+        <p class="eyebrow">Karetní hra pro partu kamarádů</p>
+        <h1>Chytré<br>prší</h1>
+        <p class="hero__lead">Klasické prší, které si pamatuje. Každý vítěz kola vymyslí nové pravidlo. Hra je s&nbsp;každým kolem těžší, chaotičtější a&nbsp;zábavnější.</p>
+        <div class="hero__cta">
+          <a class="btn btn--primary" href="#co-to-je">Naučit se hrát</a>
+          <button class="btn btn--ghost" type="button" data-print>Vytisknout pravidla</button>
+        </div>
+        <p class="hero__note">Pravidla zdarma · open source · stačí obyčejné mariášky</p>
+      </div>
+      <div class="hero__cards" aria-hidden="true">
+        <div class="card card--fan c1" data-suit="srdce"><span class="card__v">7</span><svg><use href="#s-srdce"/></svg></div>
+        <div class="card card--fan c2" data-suit="listy"><span class="card__v">S</span><svg><use href="#s-listy"/></svg></div>
+        <div class="card card--fan c3" data-suit="zaludy"><span class="card__v">K</span><svg><use href="#s-zaludy"/></svg></div>
+        <div class="card card--fan c4" data-suit="kule"><span class="card__v">E</span><svg><use href="#s-kule"/></svg></div>
+      </div>
+    </section>
+
+    <!-- CO TO JE -->
+    <section class="section" id="co-to-je">
+      <div class="wrap">
+        <p class="eyebrow">01 · Co je chytré prší?</p>
+        <h2>Jedna hra, žádné hádky o&nbsp;pravidla</h2>
+        <div class="two-col">
+          <p class="big">Prší zná každý. Jenže každý ho zná trochu jinak — a&nbsp;než se parta domluví, jak se vlastně hraje, je po večeru.</p>
+          <p>Chytré prší tenhle problém řeší. Začíná se od <strong>základních pravidel pomalého prší</strong>, která jsou pro všechny stejná. Po každém kole ale <strong>vítěz přidá jedno nové pravidlo</strong>. Všechna pravidla zůstávají ve hře, takže si je musíte pamatovat — a&nbsp;kdo zapomene, líže.</p>
+        </div>
+
+        <ol class="steps">
+          <li><span class="steps__n">1</span><h3>Hrajte pomalé prší</h3><p>První kolo podle základních pravidel, která zná každý.</p></li>
+          <li><span class="steps__n">2</span><h3>Vítěz vymyslí pravidlo</h3><p>Kdo se první zbaví karet, přidá nové chytré pravidlo. Ostatní ho musí schválit.</p></li>
+          <li><span class="steps__n">3</span><h3>Pamatujte si všechno</h3><p>Před každým kolem připomeňte všechna pravidla. Hrajte, dokud to zvládáte.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- CHYTRÁ PRAVIDLA -->
+    <section class="section" id="chytre">
+      <div class="wrap">
+        <p class="eyebrow">02 · Co z prší dělá chytré prší</p>
+        <h2>Chytrá pravidla</h2>
+        <div class="meta-rules">
+          <article><h3>Vítěz určuje nové pravidlo</h3><p>Po každém kole přibude jedno nové chytré pravidlo. Vymýšlí ho ten, kdo kolo vyhrál.</p></article>
+          <article><h3>Všichni musí souhlasit</h3><p>Nové pravidlo musí schválit všichni hráči, aby nezkazilo hru.</p></article>
+          <article><h3>Nedohrává se</h3><p>Jakmile jeden hráč vyhraje, kolo končí. Žádné dohrávání o&nbsp;druhé místo.</p></article>
+          <article><h3>Připomínejte si pravidla</h3><p>Před každým kolem se nahlas zopakují všechna dosavadní chytrá pravidla.</p></article>
+          <article><h3>Nepozornost se trestá</h3><p>Kdo neví, že je na tahu, nebo nesplní či nezná pravidlo, líže kartu. Napoprvé můžete dát varování, pak už se líže vždy.</p></article>
+          <article><h3>Nepodvádějte</h3><p>Koukat někomu do karet je snadné. Ale o&nbsp;tom tahle hra není.</p></article>
+        </div>
+
+        <div class="callouts">
+          <div class="callout">
+            <h3>Kdy hra končí?</h3>
+            <p>Hraje se, dokud si hráči dokážou všechna pravidla pamatovat. Obvykle to bývá <strong>4–8 chytrých pravidel</strong>.</p>
+          </div>
+          <div class="callout callout--warn">
+            <h3>Co kazí hru</h3>
+            <ul>
+              <li>Pravidla, která vrací hráče do hry víc než jednou kartou.</li>
+              <li>Pravidla, kvůli kterým se líže příliš často.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CO POTŘEBUJETE -->
+    <section class="section section--warm" id="potrebujete">
+      <div class="wrap">
+        <p class="eyebrow">03 · Co potřebujete</p>
+        <h2>Jeden balíček mariášových karet</h2>
+        <p class="lead">Nic víc. Možná ho máte doma v šuplíku, jen s ním tak často nehrajete. Hodí se jednohlavé i dvouhlavé, 32 karet.</p>
+
+        <div class="need">
+          <article class="need__opt">
+            <span class="need__n">A</span>
+            <h3>Máte karty doma</h3>
+            <p>Vytáhněte mariášky ze šuplíku a můžete hrát hned.</p>
+          </article>
+          <article class="need__opt">
+            <span class="need__n">B</span>
+            <h3>Vytiskněte si naše</h3>
+            <p>Nemáte karty a máte čas? Stáhněte si naše karty, vytiskněte je a vystříhejte.</p>
+            <span class="btn btn--ghost btn--soon">Karty k tisku chystáme</span>
+          </article>
+          <article class="need__opt need__opt--accent">
+            <span class="need__n">C</span>
+            <h3>Naše verze chytrého prší</h3>
+            <p>Základní pravidla i návrhy chytrých pravidel na jednom listu.</p>
+            <a class="btn btn--primary" href="downloads/chytre-prsi-pravidla.pdf" download>Stáhnout pravidla (PDF)</a>
+          </article>
+        </div>
+
+        <div class="deck">
+          <div class="deck__row">
+            <h3>Barvy</h3>
+            <ul class="suits">
+              <li data-suit="srdce"><svg><use href="#s-srdce"/></svg>Srdce <small>(červená)</small></li>
+              <li data-suit="listy"><svg><use href="#s-listy"/></svg>Listy <small>(zelená)</small></li>
+              <li data-suit="zaludy"><svg><use href="#s-zaludy"/></svg>Žaludy</li>
+              <li data-suit="kule"><svg><use href="#s-kule"/></svg>Kule</li>
+            </ul>
+          </div>
+          <div class="deck__row">
+            <h3>Hodnoty</h3>
+            <ul class="values">
+              <li>7</li><li>8</li><li>9</li><li>10</li><li>spodek</li><li>svršek</li><li>král</li><li>eso</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ZÁKLADNÍ PRAVIDLA -->
+    <section class="section" id="pravidla">
+      <div class="wrap">
+        <p class="eyebrow">04 · Základní pravidla — pomalé prší</p>
+        <h2>Jak se hraje</h2>
+
+        <div class="basics">
+          <div class="basic"><b>4</b><span>karty dostane na začátku každý hráč</span></div>
+          <div class="basic"><b>↻</b><span>hraje se po směru hodinových ručiček</span></div>
+          <div class="basic"><b>1.</b><span>začíná nejmladší hráč, nebo se losuje</span></div>
+        </div>
+
+        <ul class="rules">
+          <li><strong>Cílem je zbavit se všech karet.</strong></li>
+          <li>Na vyloženou kartu můžete položit kartu <strong>stejné barvy</strong> nebo <strong>stejné hodnoty</strong>.</li>
+          <li>Když nemůžete vyložit žádnou kartu, <strong>líznete si jednu</strong> z&nbsp;balíčku.</li>
+        </ul>
+
+        <h2 class="mt">Speciální karty</h2>
+        <div class="specials">
+          <article class="special">
+            <div class="card" data-suit="srdce"><span class="card__v">7</span><svg><use href="#s-srdce"/></svg></div>
+            <div>
+              <h3>Sedmička</h3>
+              <p>Další hráč líže <strong>2 karty</strong>. Lze ji přebít další sedmičkou — pak následující hráč líže 2&nbsp;karty za každou zahranou sedmičku.</p>
+            </div>
+          </article>
+          <article class="special">
+            <div class="card" data-suit="listy"><span class="card__v">S</span><svg><use href="#s-listy"/></svg></div>
+            <div>
+              <h3>Svršek</h3>
+              <p>Lze zahrát <strong>na jakoukoliv kartu</strong> kromě sedmičky a&nbsp;esa. Kdo ho zahraje, <strong>změní barvu</strong> podle svého výběru.</p>
+            </div>
+          </article>
+          <article class="special">
+            <div class="card" data-suit="kule"><span class="card__v">E</span><svg><use href="#s-kule"/></svg></div>
+            <div>
+              <h3>Eso</h3>
+              <p>Další hráč <strong>stojí jedno kolo</strong> (přeskočí tah). Lze ho přebít dalším esem.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SIMULÁTOR -->
+    <section class="section section--felt" id="vyzkousej">
+      <div class="wrap">
+        <p class="eyebrow">05 · Vyzkoušej si to</p>
+        <h2>Sleduj, jak hra roste</h2>
+        <p class="lead">Odehraj pár kol nanečisto. Každý vítěz přidá pravidlo — nebo napiš vlastní.</p>
+
+        <div class="sim">
+          <div class="sim__controls">
+            <button class="btn btn--primary" type="button" id="sim-play">Odehrát kolo</button>
+            <button class="btn btn--ghost" type="button" id="sim-reset">Začít znovu</button>
+            <form class="sim__own" id="sim-form">
+              <label for="sim-input" class="sr-only">Vlastní pravidlo</label>
+              <input id="sim-input" type="text" maxlength="120" placeholder="…nebo napiš vlastní pravidlo" autocomplete="off">
+              <button class="btn btn--small" type="submit">Přidat</button>
+            </form>
+          </div>
+
+          <div class="sim__meter" aria-hidden="true">
+            <span>Obtížnost</span>
+            <div class="sim__bar"><i id="sim-bar"></i></div>
+            <span id="sim-level">Pohodička</span>
+          </div>
+
+          <p class="sim__status" id="sim-status" aria-live="polite">Kolo 1 · hrají se jen základní pravidla pomalého prší.</p>
+
+          <ol class="sim__list" id="sim-list">
+            <li class="sim__base">Pomalé prší — sedmička, svršek, eso</li>
+          </ol>
+        </div>
+
+        <div class="board" id="zebricek">
+          <div class="board__head">
+            <h3>Žebříček chytrých hlav</h3>
+            <p>Do žebříčku se dostaneš, když <strong>za každé kolo napíšeš vlastní pravidlo</strong> — aspoň 4 kola, nejvíc 8. Čím víc kol vymyslíš, tím výš budeš.</p>
+          </div>
+
+          <form class="board__join" id="board-form">
+            <label for="board-name" class="sr-only">Tvoje jméno</label>
+            <input id="board-name" type="text" maxlength="30" placeholder="Tvoje jméno" autocomplete="nickname">
+            <button class="btn btn--primary" type="submit" id="board-submit" disabled>Zapsat se do žebříčku</button>
+          </form>
+          <p class="board__hint" id="board-hint" aria-live="polite"></p>
+
+          <ol class="board__list" id="board-list"></ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- INSPIRACE -->
+    <section class="section" id="inspirace">
+      <div class="wrap">
+        <p class="eyebrow">06 · Inspirace</p>
+        <h2>Návrhy chytrých pravidel</h2>
+        <p class="lead">Nevíte, co vymyslet? Začněte tady. Ale nejlepší pravidla jsou ta, která si vymyslíte sami.</p>
+        <div class="ideas" id="ideas"></div>
+      </div>
+    </section>
+
+    <!-- OPEN SOURCE -->
+    <section class="section section--ink" id="open-source">
+      <div class="wrap two-col two-col--center">
+        <div>
+          <p class="eyebrow">07 · Open source</p>
+          <h2>Pravidla patří všem</h2>
+          <p>Chytré prší je zdarma. Pravidla můžete číst, tisknout, upravovat a&nbsp;sdílet. Hra je vlastně open source sama od sebe — každá parta si ji přepisuje kolo po kole.</p>
+          <p>Máte pravidlo, které u&nbsp;vás zabralo? Pošlete nám ho a&nbsp;přidáme ho mezi inspiraci.</p>
+          <div class="hero__cta">
+            <!-- Po založení repozitáře sem přidat: <a class="btn btn--primary" href="https://github.com/…">Přispět na GitHubu</a> -->
+            <button class="btn btn--ghost btn--light" type="button" data-print>Vytisknout pravidla</button>
+          </div>
+        </div>
+        <div class="license">
+          <p class="license__tag">CC BY-SA 4.0</p>
+          <p>Text pravidel je zveřejněn pod licencí Creative Commons Uveďte původ – Zachovejte licenci. Sdílejte a&nbsp;upravujte, jen uveďte zdroj a&nbsp;zachovejte stejnou licenci.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p><strong>Chytré prší</strong> · hra, kterou hrajeme s&nbsp;kamarády a&nbsp;rádi se o&nbsp;ni dělíme.</p>
+    <p class="footer__suits" aria-hidden="true">
+      <svg data-suit="srdce"><use href="#s-srdce"/></svg>
+      <svg data-suit="listy"><use href="#s-listy"/></svg>
+      <svg data-suit="zaludy"><use href="#s-zaludy"/></svg>
+      <svg data-suit="kule"><use href="#s-kule"/></svg>
+    </p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
